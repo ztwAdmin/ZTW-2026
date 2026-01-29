@@ -31,7 +31,7 @@ vulnerable version of vsFTPd, so we type in a username that ends with
 and password combination do not exist, so we exit with ctrl+c.
 
 Using nmap again, we can peek at the port 6200 and now see that it is
-open. Not that unless we use the –sS parameter, the port will close and
+open. Note that unless we use the –sS parameter, the port will close and
 we will need to connect with netcat again. In my testing, it sometimes
 closes the port even if –sS is used.
 
