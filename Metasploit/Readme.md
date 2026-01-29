@@ -1,4 +1,4 @@
-![ZTW Logo](../Assets/ZTW26 Wordmark-border.png)
+![ZTW Logo](../Assets/ZTW26_Wordmark-border.png)
 
 # TL26MHLDev
 
