@@ -1,6 +1,6 @@
-![ZTW Logo](../Assets/Hacking_Labs_graphics_ztw_logo_med_1.png)
+![ZTW Logo](../Assets/ZTW26 Wordmark-border.png)
 
-# TL25MHLDev
+# TL26MHLDev
 
 In this lab we perform two hacks against two intentionally vulnerable VM
 targets. The first target is a Metasploitable VM which is a great target
@@ -12,7 +12,8 @@ We begin each hack the same way, by doing recon with NMAP. For the first
 attack, we already know the IP address.
 
 <img src="Assets/04842d39996d808320216f19b734b36b7f410b92.png"
-style="width:6.5in;height:6.45834in" />If we wanted to go even further,
+style="width:6.5in;height:6.45834in" />
+If we wanted to go even further,
 we could use the –p## parameter to specify a port, but it is not
 required to do so at this time.
 
@@ -34,9 +35,9 @@ we will need to connect with netcat again. In my testing, it sometimes
 closes the port even if –sS is used.
 
 <img src="Assets/30f88cb08a33fefb67f5c062bb1d2100fd87ac0c.png"
-style="width:6.5in;height:2.46875in" />Once we are sure the port is
-open, we can connect to it with netcat and verify we are connected using
-command like ”id”, ”ls”, and ”ip a”.
+style="width:6.5in;height:2.46875in" />
+Once we are sure the port is open, we can connect to it with netcat 
+and verify we are connected using command like ”id”, ”ls”, and ”ip a”.
 
 <img src="Assets/e21c65449e3088cf34dea541c541e4626bbba4a0.png"
 style="width:5.94792in;height:6.5in" />
@@ -96,9 +97,10 @@ We can see we need to set rhosts again, but also that we should change
 lhost to our ip. To get our IP we use the “ip a” command.
 
 <img src="Assets/1f5f8562a10cb7e51a9c78e0d58c73a5f3da37c6.png"
-style="width:6.5in;height:3.53125in" />Once set, we can run the exploit
-and wait while it performs a series of complicated tasks that hopefully
-ends with a win message and a meterpreter prompt.
+style="width:6.5in;height:3.53125in" />
+Once set, we can run the exploit and wait while it performs a series 
+of complicated tasks that hopefullyends with a win message and a 
+meterpreter prompt.
 
 <img src="Assets/9a87861af27eb7caeb88b1cc26b99d1b26ee0bfe.png"
 style="width:6.5in;height:3.97917in" />
