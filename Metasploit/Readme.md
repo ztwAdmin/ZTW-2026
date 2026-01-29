@@ -13,6 +13,7 @@ attack, we already know the IP address.
 
 <img src="Assets/04842d39996d808320216f19b734b36b7f410b92.png"
 style="width:6.5in;height:6.45834in" />
+
 If we wanted to go even further,
 we could use the –p## parameter to specify a port, but it is not
 required to do so at this time.
@@ -36,6 +37,7 @@ closes the port even if –sS is used.
 
 <img src="Assets/30f88cb08a33fefb67f5c062bb1d2100fd87ac0c.png"
 style="width:6.5in;height:2.46875in" />
+
 Once we are sure the port is open, we can connect to it with netcat 
 and verify we are connected using command like ”id”, ”ls”, and ”ip a”.
 
@@ -98,6 +100,7 @@ lhost to our ip. To get our IP we use the “ip a” command.
 
 <img src="Assets/1f5f8562a10cb7e51a9c78e0d58c73a5f3da37c6.png"
 style="width:6.5in;height:3.53125in" />
+
 Once set, we can run the exploit and wait while it performs a series 
 of complicated tasks that hopefullyends with a win message and a 
 meterpreter prompt.
