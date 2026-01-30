@@ -123,7 +123,7 @@ keep the terminal window open.
 style="width:6.5in;height:3.79167in" />
 
 We can then launch the wordlists from the start menu by going to
-start-\>05 Password Attacks-\>Password Profiling &
+start-\>08 Credential Access-\>Password Profiling &
 Wordlists-\>wordlists. Select Y on the window that pops up.
 
 <img src="Assets/c308a143315c2b053a4145c7e8b360430f1c34ee.png"
