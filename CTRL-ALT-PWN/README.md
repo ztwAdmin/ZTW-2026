@@ -2,7 +2,7 @@
 
 # Welcome to CTRL+ALT+PWN for ZTW 2026!
 
-## Scope
+## Target Scope
 
 ### 10.10.1.11 - 10.10.1.18
 
@@ -19,6 +19,7 @@
    attacks.
 9. No asking for hints, ThreatLocker employees can't help you even if they
    wanted to.
+10. Have fun!
 
 ## Wi-Fi Access
 
