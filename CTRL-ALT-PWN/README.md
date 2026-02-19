@@ -14,12 +14,13 @@
 4. Do not attempt to tamper with the computer physically.
 5. Do not attempt to plug any devices into the computer.
 6. Do not attempt to unplug or tamper with the Wi-Fi infrastructure.
-7. Only attack one instance.
+7. Only attack one instance at a time.
 8. Be mindful of other users, especially when performing password bruteforce
    attacks.
 9. No asking for hints, ThreatLocker employees can't help you even if they
    wanted to.
-10. Have fun!
+10. Do not attack hotel infrastructure.
+11. Have fun!
 
 ## Wi-Fi Access
 
