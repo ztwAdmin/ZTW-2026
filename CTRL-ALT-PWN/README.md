@@ -2,13 +2,13 @@
 
 # Welcome to CTRL+ALT+PWN for ZTW 2026!
 
-## Target Scope
+## Target Range
 
 ### 10.10.1.11 - 10.10.1.18
 
 ## Rules
 
-1. Do not interact with any devices outside the specified scope.
+1. Do not interact with any devices outside the specified range.
 2. Do not perform any denial of service attacks.
 3. Do not perform any Wi-Fi deauthentication attacks.
 4. Do not attempt to tamper with the computer physically.
