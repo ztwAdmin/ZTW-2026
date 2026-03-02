@@ -5,14 +5,14 @@ This attack chain demonstrates how misconfigured ADCS templates combined with we
 ## Key Tools Needed
 
 - **Certify1.exe** - Certificate template manipulation
-- **Certify2.exe** - Certificate template manipulation (new version)
-- **Rubeus.exe** - Kerberos authentication (optional)
+- **[Certify](https://github.com/GhostPack/Certify)2.exe** - Certificate template manipulation (new version)
+- **[Rubeus](https://github.com/GhostPack/Rubeus).exe** - Kerberos authentication (optional)
 - **PowerShell** - Certificate requests and session management
 - **Active Directory PowerShell Module** - For AD modifications (RSAT)
-- **ADeleg** - an Active Directory delegation management tool
-- **ADeleginator** - A tool to find insecure trustee and resource delegations in Active Directory. ADeleginator is a wrapper around [ADeleg](https://github.com/mtth-bfft/adeleg/), a tool written by [@mtth-bfft](https://github.com/mtth-bfft).
-- **Locksmith** - A small tool built to find and fix common misconfigurations in Active Directory Certificate Services.
-- **NetTools** - The Swiss army knife of AD troubleshooting
+- **[ADeleg](https://github.com/mtth-bfft/adeleg/)** - an Active Directory delegation management tool
+- **[ADeleginator](https://github.com/techspence/adeleginator)** - A tool to find insecure trustee and resource delegations in Active Directory. ADeleginator is a wrapper around ADeleg, a tool written by [@mtth-bfft](https://github.com/mtth-bfft).
+- **[Locksmith](https://github.com/jakehildreth/locksmith)** - A small tool built to find and fix common misconfigurations in Active Directory Certificate Services.
+- **[NetTools](https://nettools.net/)** - The Swiss army knife of AD troubleshooting
 
 ## Success Indicators
 
