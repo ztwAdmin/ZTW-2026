@@ -1,0 +1,22 @@
+Fake TL bitcoin address: bc1qThreatLocker9x8w7v6t5r4e3d2c1b0a7z6y5x4w3v
+
+(Real) Example bitcoin addresses:
+
+1LruNZjwamWJXThX2Y8C2d47QqhAkkc5os
+
+bc1q7ydrtdn8z62xhslqyqtyt38mm4e2c4h3mxjkug
+
+bc1q32lyrhp9zpww22phqjwwmelta0c8a5q990ghs6
+
+bc1q0ymzksy046tv4z88ts5nmu7s574umnwmdev3rt
+
+15cHRgVrGKz7qp2JL2N5mkB2MCFGLcnHxv
+
+3FM9vDYsN2iuMPKWjAcqgyahdwdrUxhbJ3
+
+17MWdxfjPYP2PYhdy885QtihfbW181r1rn
+
+bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h
+
+bc1q8yj0herd4r4yxszw3nkfvt53433thk0f5qst4g
+

